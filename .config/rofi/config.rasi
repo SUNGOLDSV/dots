@@ -1,0 +1,11 @@
+configuration {
+theme: "/usr/share/rofi/themes/DarkBlue.rasi";
+padding: 20;
+line-padding: 2;
+show-icons: true;
+separator-style: "solid";
+hide-scrollbar: true;
+cycle: true;
+sidebar-mode: true;
+modi: "drun,window,run,ssh";
+}
