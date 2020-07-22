@@ -46,12 +46,8 @@ bindsym $mod+Return exec konsole
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start dmenu (a program launcher)
+# start rofi
 bindsym $mod+d exec --no-startup-id "rofi -show"
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
 bindsym $mod+j focus left
@@ -179,11 +175,20 @@ bindsym $mod+r mode "resize"
 #bar {
 #        status_command i3status
 #}
-# ENable Tap to Click
+
+# Set Background
 exec --no-startup-id feh --bg-scale /home/sungold/Pictures/pp.jpg
+
+# Enable Tap to Click for i3 only
 exec --no-startup-id xinput --set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
+
+# Start Picom (Compositor)
 exec --no-startup-id picom &
-exec polybar fullbar &
+
+# Start Polybar
+exec --no-startup-id polybar fullbar &
+
+# Some i3-gaps customisation
 gaps inner 10
 gaps outer 10
 new_window pixel 0
