@@ -10,6 +10,11 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+# Export user bin
+if [[ -s "/home/sungold/bin/" ]]; then
+  export PATH=/home/sungold/bin:$PATH
+fi
+
 # Customize to your needs...
 alias pman="sudo pacman -S"
 
