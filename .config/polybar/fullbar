@@ -46,7 +46,7 @@ module-margin-right      = 1
 
 
 
-tray-position = right
+tray-position =
 
 tray-padding = 2
 
