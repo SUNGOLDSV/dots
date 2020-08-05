@@ -2,7 +2,7 @@ configuration {
 theme: "/usr/share/rofi/themes/DarkBlue.rasi";
 padding: 20;
 line-padding: 2;
-show-icons: true;
+show-icons: false;
 separator-style: "solid";
 hide-scrollbar: true;
 cycle: true;
