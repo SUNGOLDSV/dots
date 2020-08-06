@@ -18,7 +18,7 @@ modules-left = i3 mpd separator title
 
 modules-center = 
 
-modules-right = memory separator cpu separator volume separator wlan separator battery separator updates separator notifications separator date separator powermenu
+modules-right = memory separator cpu separator volume separator wlan separator battery separator filesystem separator notifications separator date separator powermenu
 
 
 
@@ -220,15 +220,15 @@ content-padding = 2
 
 
 
-[module/updates]
+[module/filesystem]
 
-type = custom/script
+type = internal/fs
 
-exec = ~/.config/polybar/updates.sh
+mount-0 = /
 
-tail = true
+label-mounted =   %used%/%total%
 
-interval = 5
+interval = 30
 
 
 
