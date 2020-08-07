@@ -179,9 +179,9 @@ bindsym $mod+r mode "resize"
 # Set Background
 exec --no-startup-id feh --bg-scale /home/sungold/Pictures/pp.jpg
 
-# Enable Tap to Click for i3 only
+# Enable Tap to Click & Drag Lock for i3 only
 exec --no-startup-id xinput --set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
-
+exec --no-startup-id xinput --set-prop "SynPS/2 Synaptics TouchPad" 290 1
 # Start Picom (Compositor)
 exec --no-startup-id picom &
 
