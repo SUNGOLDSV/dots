@@ -198,3 +198,6 @@ exec --no-startup-id "redshift -l 30.73:76.77"
 gaps inner 10
 gaps outer 10
 new_window pixel 0
+
+# Bluetooth rofi ctrl
+bindsym $mod+b exec --no-startup-id rofi-bluetooth

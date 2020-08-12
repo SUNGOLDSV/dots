@@ -18,7 +18,7 @@ modules-left = i3 mpd separator title
 
 modules-center = 
 
-modules-right = memory separator cpu separator volume separator wlan separator battery separator filesystem separator notifications separator date separator powermenu
+modules-right = memory separator cpu separator volume separator wlan separator bluetooth separator battery separator filesystem separator notifications separator date separator powermenu
 
 
 
@@ -109,6 +109,19 @@ interval = 5
 label-connected =  %essid% 
 
 label-disconnected = 
+
+
+[module/bluetooth]
+
+type = custom/script
+
+exec = /home/sungold/.config/polybar/bluetooth.sh
+
+interval = 2
+
+click-left = exec rofi-bluetooth
+
+click-right = exec /home/sungold/.config/polybar/toggle_bluetooth.sh
 
 
 
