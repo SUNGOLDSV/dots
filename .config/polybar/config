@@ -102,7 +102,7 @@ time-format = %H:%M
 
 type = internal/network
 
-interface = wlp2s0
+interface = wlp8s0
 
 interval = 5
 

@@ -36,3 +36,5 @@ then
 else
     alias cat="bat"
 fi
+
+alias pmbootstrap="/home/sungold/mainline/pmbootstrap/pmbootstrap.py"
