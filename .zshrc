@@ -26,7 +26,7 @@ else
     alias ls="lsd"
 fi
 
-alias dots="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
+alias dots="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 neofetch
 
 # Check for bat
