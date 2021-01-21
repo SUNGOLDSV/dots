@@ -16,20 +16,18 @@ env:
 # Window dimensions in character columns and lines
 # (changes require restart)
 window:
-  dimensions:
-    columns: 110
-    lines: 33
-
   # Adds this many blank pixels of padding around the window
   # Units are physical pixels; this is not DPI aware.
   # (change requires restart)
   padding:
-    x: 0
-    y: 0
+    x: 20
+    y: 20
 
   decorations: none
 
-background_opacity: 0.95
+dynamic_padding: true
+live_config_reload: true
+background_opacity: 0.90
 
 # The FreeType rasterizer needs to know the device DPI for best results
 # (changes require restart)
@@ -84,38 +82,55 @@ font:
 # Should display the render timer
 debug.render_timer: false
 
-# https://github.com/Rigellute/rigel
+# Repository: https://github.com/arcticicestudio/nord-alacritty
 colors:
-  # Default colors
   primary:
-    background: '0x002635'
-    foreground: '0xe6e6dc'
-
-  # Normal colors
-  normal:
-    black:   '0x00384d'
-    red:     '0xc43061'
-    green:   '0x7fc06e'
-    yellow:  '0xf08e48'
-    blue:    '0x1c8db2'
-    magenta: '0xc694ff'
-    cyan:    '0x00cccc'
-    white:   '0x77929e'
-
-  # Bright colors
-  bright:
-    black:   '0x517f8d'
-    red:     '0xff5a67'
-    green:   '0x9cf087'
-    yellow:  '0xffcc1b'
-    blue:    '0x7eb2dd'
-    magenta: '0xfb94ff'
-    cyan:    '0x00ffff'
-    white:   '0xb7cff9'
-
+    background: '#2e3440'
+    foreground: '#d8dee9'
+    dim_foreground: '#a5abb6'
   cursor:
-    text: "0x002635"
-    cursor: "0xffcc1b"
+    text: '#d8dee9'
+    cursor: '#d8dee9'
+  vi_mode_cursor:
+    text: '#d8dee9'
+    cursor: '#d8dee9'
+  selection:
+    text: CellForeground
+    background: '#4c566a'
+  search:
+    matches:
+      foreground: CellBackground
+      background: '#88c0d0'
+    bar:
+      background: '#434c5e'
+      foreground: '#d8dee9'
+  normal:
+    black: '#3b4252'
+    red: '#bf616a'
+    green: '#a3be8c'
+    yellow: '#ebcb8b'
+    blue: '#8fa7bc'
+    magenta: '#b48ead'
+    cyan: '#8fbcbb'
+    white: '#d8dee9'
+  bright:
+    black: '#4c566a'
+    red: '#bf616a'
+    green: '#a3be8c'
+    yellow: '#ebcb8b'
+    blue: '#81a1c1'
+    magenta: '#b48ead'
+    cyan: '#8fbcbb'
+    white: '#eceff4'
+  dim:
+    black: '#373e4d'
+    red: '#94545d'
+    green: '#809575'
+    yellow: '#b29e75'
+    blue: '#68809a'
+    magenta: '#8c738c'
+    cyan: '#6d96a5'
+    white: '#aeb3bb'
 
 # Visual Bell
 #

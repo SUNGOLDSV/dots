@@ -11,8 +11,8 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Export user bin
-if [[ -s "/home/sungold/bin/" ]]; then
-  export PATH=/home/sungold/bin:$PATH
+if [[ -s "/home/sungold/.local/bin" ]]; then
+  export PATH=/home/sungold/.local/bin/:$PATH
 fi
 
 # Customize to your needs...
@@ -37,4 +37,10 @@ else
     alias cat="bat"
 fi
 
-alias pmbootstrap="/home/sungold/mainline/pmbootstrap/pmbootstrap.py"
+GPG_TTY=$(tty)
+export GPG_TTY
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+autoload bashcompinit
+bashcompinit
+eval "$(register-python-argcomplete pmbootstrap)"

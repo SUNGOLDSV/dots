@@ -14,7 +14,7 @@ background = #bb212121
 
 foreground = #eeffff
 
-modules-left = i3 mpd separator title 
+modules-left = i3 separator title 
 
 modules-center = 
 
@@ -84,7 +84,7 @@ poll-interval = 2
 
 format-discharging =  <label-discharging>%
 
-format-full =  <label-full>% 
+format-full =  <label-full> 
 
 format-charging =   <label-charging>% 
 

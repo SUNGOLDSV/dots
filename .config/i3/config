@@ -24,7 +24,7 @@ exec --no-startup-id export LC_ALL=en_US.UTF-8
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock-fancy
+exec --no-startup-id xss-lock --transfer-sleep-lock -- /home/sungold/.config/i3/lock.sh
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -36,6 +36,10 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+# Use brightnessctl to set brightness
+bindsym XF86MonBrightnessUp exec brightnessctl set +10%
+bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -189,7 +193,7 @@ exec --no-startup-id picom &
 exec --no-startup-id polybar fullbar &
 
 # Start Notification Center
-exec --no-startup-id deadd-notification-center &
+exec --no-startup-id dunst &
 
 # Start Redshift for nearest capital
 exec --no-startup-id "redshift -l 30.73:76.77"
@@ -197,7 +201,21 @@ exec --no-startup-id "redshift -l 30.73:76.77"
 # Some i3-gaps customisation
 gaps inner 10
 gaps outer 10
-new_window pixel 0
+#smart_gaps on
+#new_window pixel 0
 
 # Bluetooth rofi ctrl
 bindsym $mod+b exec --no-startup-id rofi-bluetooth
+
+# Borders
+for_window[class=".*"] border pixel 3
+smart_borders on
+
+# Window decoration
+# class                 border  backgr. text    indicator child_border
+client.focused          #5e81ac #5e81ac #eceff4 #434c5e   #5e81ac
+client.focused_inactive #353b49 #353b49 #d8dee9 #3b4252   #353b49
+client.unfocused        #353b49 #353b49 #d8dee9 #3b4252   #353b49
+client.urgent           #bf616a #bf616a #eceff4 #900000   #bf616a
+client.placeholder      #000000 #0c0c0c #eceff4 #000000   #0c0c0c
+
